@@ -36,19 +36,22 @@
             this.sexLabel = new System.Windows.Forms.Label();
             this.maleCB = new System.Windows.Forms.CheckBox();
             this.femaleCB = new System.Windows.Forms.CheckBox();
+            this.copyButton1 = new System.Windows.Forms.Button();
+            this.copyButton2 = new System.Windows.Forms.Button();
+            this.copyAllButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // firstNameTB
             // 
             this.firstNameTB.Location = new System.Drawing.Point(13, 27);
             this.firstNameTB.Name = "firstNameTB";
-            this.firstNameTB.Size = new System.Drawing.Size(100, 20);
+            this.firstNameTB.Size = new System.Drawing.Size(102, 20);
             this.firstNameTB.TabIndex = 0;
             // 
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(12, 9);
+            this.firstNameLabel.Location = new System.Drawing.Point(10, 9);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(89, 13);
             this.firstNameLabel.TabIndex = 1;
@@ -57,7 +60,7 @@
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(12, 59);
+            this.lastNameLabel.Location = new System.Drawing.Point(10, 59);
             this.lastNameLabel.Name = "lastNameLabel";
             this.lastNameLabel.Size = new System.Drawing.Size(113, 13);
             this.lastNameLabel.TabIndex = 2;
@@ -65,7 +68,7 @@
             // 
             // lastNameTB
             // 
-            this.lastNameTB.Location = new System.Drawing.Point(15, 75);
+            this.lastNameTB.Location = new System.Drawing.Point(13, 75);
             this.lastNameTB.Name = "lastNameTB";
             this.lastNameTB.Size = new System.Drawing.Size(100, 20);
             this.lastNameTB.TabIndex = 3;
@@ -76,9 +79,9 @@
             this.generateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.generateButton.Font = new System.Drawing.Font("MS PGothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generateButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.generateButton.Location = new System.Drawing.Point(280, 23);
+            this.generateButton.Location = new System.Drawing.Point(316, 27);
             this.generateButton.Name = "generateButton";
-            this.generateButton.Size = new System.Drawing.Size(171, 72);
+            this.generateButton.Size = new System.Drawing.Size(171, 68);
             this.generateButton.TabIndex = 4;
             this.generateButton.Text = "G E N E R A T E";
             this.generateButton.UseVisualStyleBackColor = false;
@@ -115,11 +118,44 @@
             this.femaleCB.UseVisualStyleBackColor = true;
             this.femaleCB.CheckedChanged += new System.EventHandler(this.femaleCB_CheckedChanged);
             // 
+            // copyButton1
+            // 
+            this.copyButton1.Location = new System.Drawing.Point(122, 24);
+            this.copyButton1.Name = "copyButton1";
+            this.copyButton1.Size = new System.Drawing.Size(75, 23);
+            this.copyButton1.TabIndex = 8;
+            this.copyButton1.Text = "<--Copy";
+            this.copyButton1.UseVisualStyleBackColor = true;
+            this.copyButton1.Click += new System.EventHandler(this.copyButton1_Click);
+            // 
+            // copyButton2
+            // 
+            this.copyButton2.Location = new System.Drawing.Point(122, 72);
+            this.copyButton2.Name = "copyButton2";
+            this.copyButton2.Size = new System.Drawing.Size(75, 23);
+            this.copyButton2.TabIndex = 9;
+            this.copyButton2.Text = "<--Copy";
+            this.copyButton2.UseVisualStyleBackColor = true;
+            this.copyButton2.Click += new System.EventHandler(this.copyButton2_Click);
+            // 
+            // copyAllButton
+            // 
+            this.copyAllButton.Location = new System.Drawing.Point(221, 27);
+            this.copyAllButton.Name = "copyAllButton";
+            this.copyAllButton.Size = new System.Drawing.Size(75, 68);
+            this.copyAllButton.TabIndex = 10;
+            this.copyAllButton.Text = "COPY ALL";
+            this.copyAllButton.UseVisualStyleBackColor = true;
+            this.copyAllButton.Click += new System.EventHandler(this.copyAllButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(488, 184);
+            this.Controls.Add(this.copyAllButton);
+            this.Controls.Add(this.copyButton2);
+            this.Controls.Add(this.copyButton1);
             this.Controls.Add(this.femaleCB);
             this.Controls.Add(this.maleCB);
             this.Controls.Add(this.sexLabel);
@@ -145,6 +181,9 @@
         private System.Windows.Forms.Label sexLabel;
         private System.Windows.Forms.CheckBox maleCB;
         private System.Windows.Forms.CheckBox femaleCB;
+        private System.Windows.Forms.Button copyButton1;
+        private System.Windows.Forms.Button copyButton2;
+        private System.Windows.Forms.Button copyAllButton;
     }
 }
 

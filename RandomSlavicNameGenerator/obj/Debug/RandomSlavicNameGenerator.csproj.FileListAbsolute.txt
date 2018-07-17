@@ -7,3 +7,4 @@ C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\
 C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.csproj.CoreCompileInputs.cache
 C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.exe
 C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.pdb
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomNameLastNameGenerator.Form1.resources

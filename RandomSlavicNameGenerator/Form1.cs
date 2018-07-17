@@ -38,12 +38,10 @@ namespace RandomNameLastNameGenerator
         {
             if (femaleCB.Checked)
             {
-                
                 maleCB.Checked = false;
             }
             else
             {
-                
                 maleCB.Checked = true;
             }
         }
@@ -52,20 +50,76 @@ namespace RandomNameLastNameGenerator
         {
             if (maleCB.Checked)
             {
-                string[] names = File.ReadAllLines(@"..\..\firstNamesMale.txt", System.Text.Encoding.Default); /*Если имена фамилии изменятся в рантайме, то это не помещает работе приложения, хотя это и медленный способ*/
-                string[] lastNames = File.ReadAllLines(@"..\..\lastNamesMale.txt", System.Text.Encoding.Default);
-                Random rand = new Random();
-                firstNameTB.Text = names[rand.Next(0, names.Length)];
-                lastNameTB.Text = lastNames[rand.Next(0, lastNames.Length)];
+
+                try
+                {
+                    string[] names = File.ReadAllLines(@"..\..\sources\firstNamesMale.txt", System.Text.Encoding.Default); /*Если имена фамилии изменятся в рантайме, то это не помещает работе приложения, хотя это и медленный способ*/
+                    string[] lastNames = File.ReadAllLines(@"..\..\sources\lastNamesMale.txt", System.Text.Encoding.Default);
+                    Random rand = new Random();
+                    firstNameTB.Text = names[rand.Next(0, names.Length)];
+                    lastNameTB.Text = lastNames[rand.Next(0, lastNames.Length)];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("It appears that some files are missing in sources or files are empty. Check for: firtsNamesFemale, firtsNamesMale, lastNamesFemale, lastNamesMale\nКажется, источники отсутсвуют в sources или они пусты. Проверьте  наличие:firtsNamesFemale, firtsNamesMale, lastNamesFemale, lastNamesMale\n" + ex.Message);
+                }
             }
             else
             {
-                string[] names = File.ReadAllLines(@"..\..\firstNamesFemale.txt", System.Text.Encoding.Default); /*Если имена фамилии изменятся в рантайме, то это не помещает работе приложения, хотя это и медленный способ*/
-                string[] lastNames = File.ReadAllLines(@"..\..\lastNamesFemale.txt", System.Text.Encoding.Default);
-                Random rand = new Random();
-                firstNameTB.Text = names[rand.Next(0, names.Length)];
-                lastNameTB.Text = lastNames[rand.Next(0, lastNames.Length)];
+                try
+                {
+                    string[] names = File.ReadAllLines(@"..\..\sources\firstNamesFemale.txt", System.Text.Encoding.Default); /*Если имена фамилии изменятся в рантайме, то это не помещает работе приложения, хотя это и медленный способ*/
+                    string[] lastNames = File.ReadAllLines(@"..\..\sources\lastNamesFemale.txt", System.Text.Encoding.Default);
+                    Random rand = new Random();
+                    firstNameTB.Text = names[rand.Next(0, names.Length)];
+                    lastNameTB.Text = lastNames[rand.Next(0, lastNames.Length)];
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("It appears that some files are missing in sources or files are empty. Check for: firtsNamesFemale, firtsNamesMale, lastNamesFemale, lastNamesMale\nКажется, источники отсутсвуют в sources или они пусты. Проверьте  наличие:firtsNamesFemale, firtsNamesMale, lastNamesFemale, lastNamesMale\n" + ex.Message);
+                }
+            }
+        }
+
+        private void copyButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(firstNameTB.Text);
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show("It appears that string is empty\nКажется, строка пуста", ex.Message);
+            }
+        }
+
+        private void copyButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(lastNameTB.Text);
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show("It appears that string is empty\nКажется, строка пуста", ex.Message);
+            }
+
+        }
+
+        private void copyAllButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(firstNameTB.Text + " " + lastNameTB.Text);
+                if (firstNameTB.Text == "" || lastNameTB.Text == "")
+                {
+                    throw new ArgumentNullException("text", "It appears that one of the strings is empty\nКажется, одна или обе строки пусты");
+                }
+            }
+            catch (ArgumentNullException ex)
+            {
+                MessageBox.Show( ex.Message);
             }
         }
     }
