@@ -1,0 +1,9 @@
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\bin\Debug\RandomSlavicNameGenerator.exe.config
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\bin\Debug\RandomSlavicNameGenerator.exe
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\bin\Debug\RandomSlavicNameGenerator.pdb
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.csprojAssemblyReference.cache
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.Properties.Resources.resources
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.csproj.GenerateResource.cache
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.csproj.CoreCompileInputs.cache
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.exe
+C:\Users\alexk\source\repos\RandomSlavicNameGenerator\RandomSlavicNameGenerator\obj\Debug\RandomSlavicNameGenerator.pdb
