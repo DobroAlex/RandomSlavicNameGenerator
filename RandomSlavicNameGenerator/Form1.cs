@@ -22,28 +22,12 @@ namespace RandomNameLastNameGenerator
 
         private void maleCB_CheckedChanged(object sender, EventArgs e)
         {
-            if (maleCB.Checked)
-            {
-                
-                femaleCB.Checked = false;
-            }
-            else
-            {
-                
-                femaleCB.Checked = true;
-            }
+            femaleCB.Checked = !maleCB.Checked;
         }
 
         private void femaleCB_CheckedChanged(object sender, EventArgs e)
         {
-            if (femaleCB.Checked)
-            {
-                maleCB.Checked = false;
-            }
-            else
-            {
-                maleCB.Checked = true;
-            }
+            maleCB.Checked = !femaleCB.Checked;
         }
 
         private void generateButton_Click(object sender, EventArgs e)
